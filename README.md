@@ -5,7 +5,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
   <p align="center">
     <a href="https://scholar.google.com/citations?user=lijAs5AAAAAJ">Yuki Kondo</a>
     ·
-    <a href="https://scholar.google.com/citations?user=Tgbsbs8AAAAJ">Qiyu Sun</a>
+    <a href="https://scholar.google.com/citations?user=Tgbsbs8AAAAJ">Norimichi Ukita</a>
   </p>
   <h2 align="center"><p>
     <a href="https://arxiv.org/abs/2302.12491" align="center">Paper</a> | 
