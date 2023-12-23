@@ -49,7 +49,7 @@ Distributed under the Apache-2.0 license License. See `LICENSE` for more informa
 ## BibTeX
 If you find our models useful, please consider citing our paper!
 ```
-@article{kondo2023joint,
+@article{kondo2023csbsr,
   title={Joint Learning of Blind Super-Resolution and Crack Segmentation for Realistic Degraded Images},
   author={Kondo, Yuki and Ukita, Norimichi},
   journal={arXiv preprint arXiv:2302.12491},
