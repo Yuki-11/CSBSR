@@ -9,7 +9,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
   </p>
   <h2 align="center"><p>
     <a href="https://arxiv.org/abs/2302.12491" align="center">Paper</a> | 
-    <a href="https://yuki-11.github.io/CSBSR" align="center">Project Page (Coming soon...)</a>
+    <a href="https://yuki-11.github.io/CSBSR-project-page/" align="center">Project Page (Coming soon...)</a>
   </p></h2>
   <div align="center"></div>
 </p>
