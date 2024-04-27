@@ -1,0 +1,6 @@
+/datasets/
+/output
+/env/
+__pycache__/
+/wandb
+/weights

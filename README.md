@@ -1,58 +1,96 @@
-# 
-<p align="center">
-  <h1 align="center"> <ins>CSBSR</ins>:<br> Joint Learning of Blind Super-Resolution and
-Crack Segmentation for Realistic Degraded Images</h1>
-  <p align="center">
-    <a href="https://scholar.google.com/citations?user=lijAs5AAAAAJ">Yuki Kondo</a>
-    ·
-    <a href="https://scholar.google.com/citations?user=Tgbsbs8AAAAJ">Norimichi Ukita</a>
-  </p>
-  <h2 align="center"><p>
-    <a href="https://arxiv.org/abs/2302.12491" align="center">Paper</a> | 
-    <a href="https://yuki-11.github.io/CSBSR-project-page/" align="center">Project Page (Coming soon...)</a>
-  </p></h2>
-  <div align="center"></div>
-</p>
-<br/>
-<p align="center">
-    <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/result_csbsr_github.png" alt="example" width=80%>
-    <br>
-    <em>Crack segmentation challenges for synthetically-degraded images given by low resolution and anisotropic Gaussian blur. Our method (f) CSBSR succeeds in detecting cracks in the most detail compared to previous studies (d), (e). Furthermore, in several cases our method was able to detect cracks as successfully as when GT high-resolution images were used for segmentation (c), despite the fact that our method was inferring from degraded images.</em>
-</p>
+# Crack Segmentation for Low-Resolution Images using Joint Learning with Blind Super-Resolution (CSBSR)
+### [Paper](http://www.mva-org.jp/Proceedings/2021/papers/O1-1-2.pdf) | [Data](https://drive.google.com/drive/folders/1b8E0XjgdstW3tvKdGFAXA4utktgeguNX?usp=sharing)
+<!-- [![Open CSSR in Colab](https://colab.research.google.com/)<br> -->
+<br>
 
-## Table of Contents
+[Crack Segmentation for Low-Resolution Images using Joint Learning with Super-Resolution](http://www.mva-org.jp/Proceedings/2021/papers/O1-1-2.pdf)<br>
+ [Yuki Kondo](https://yuki-11.github.io/)\*<sup>1</sup>,
+ [Norimichi Ukita](https://www.toyota-ti.ac.jp/Lab/Denshi/iim/ukita/index-j.html)\*<sup>1</sup><br>
+ \*<sup>1</sup>[Toyota Technological Institute (TTI-J)](https://www.toyota-ti.ac.jp/english/) <br>
+in [MVA 2021](http://www.mva-org.jp/mva2021/) (Oral Presentation, [Best Practical Paper Award](http://www.mva-org.jp/archives.BestPracticalPaperAward.php))
 
-- [About the Project](#about-the-project)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [License](#license)
-- [Contact](#contact)
+<img src='imgs/results.png'/>
 
-## About the Project
-This paper proposes crack segmentation augmented by super resolution (SR) with deep neural networks. In the proposed method, a SR network is jointly trained with a binary segmentation network in an end-to-end manner. This joint learning allows the SR network to be optimized for improving segmentation results. For realistic scenarios, the SR network is extended from non-blind to blind for processing a low-resolution image degraded by unknown blurs. The joint network is improved by our proposed two extra paths that further encourage the mutual optimization between SR and segmentation. Comparative experiments with State-of-the-Art segmentation methods demonstrate the superiority of our joint learning, and various ablation studies prove the effects of our contributions.
+## Our Framework
+<img src='imgs/arc.png'/>
 
-## Getting Starte
-In your Python environment, run:
-```bash
-pip install -r requirement.txt
-```
-🚧 **Code will be released soon! Stay tuned.** 🚧
+## News
+* July 27, 2021 -> We received the [Best Practical Paper Award](http://www.mva-org.jp/archives.BestPracticalPaperAward.php) at [MVA 2021](http://www.mva-org.jp/mva2021/)
+
+## What's this?
+
+We have proposed a method for high-resolution crack segmentation for low-resolution images. This approach enables automatic detection of cracks even when the image resolution of the crack area is reduced due to an environment in which the area where defects may occur must be photographed from a distance (e.g., An environment in which a drone that targets a high-altitude chimney wall must take a distance in order to fly safely.). The proposed method is composed of the following two approaches.
+
+1. Deep learning based super resolution to increase the resolution of low-resolution images. Segmentation of this super-resolution image enables defect detection. In addition, we proposed **CSSR (Crack Segmentation with Super Resolution)** using end-to-end joint learning to **optimize the super-resolution for the crack segmentation process**.
+
+2. In order to optimize the deep learning model for defect segmentation, we proposed a loss function **Boundary Combo loss** that simultaneously optimizes the global and local structures of cracks. This loss function enables both detection of thin and difficult-to-detect cracks and detection of fine crack boundaries.
+
+**The experimental results show that the proposed method is superior to the conventional method, and quantitatively\*<sup>1</sup> and qualitatively, the segmentation is as precise as when using high-resolution images.**
+
+ \*<sup>1</sup>; In terms of IoU, the proposed method achieves **97.3% of the IoU of the high-resolution image input**.
+
+## Dependencies
+* Python >= 3.6
+* PyTorch >= 1.8
+* numpy >= 1.19
+
 
 ## Usage
-🚧 **Code will be released soon! Stay tuned.** 🚧
 
-## License
+1. Clone the repository:
 
-Distributed under the Apache-2.0 license License. See `LICENSE` for more information.
+   ```shell
+   git clone https://github.com/Yuki-11/CSSR.git
+   ```
 
+2. Download [khanhha dataset](https://github.com/khanhha/crack_segmentation):
 
-## BibTeX
-If you find our models useful, please consider citing our paper!
+   ```shell
+   cd $CSSR_ROOT
+   mkdir datasets
+   cd datasets
+   curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP" > /dev/null
+   CODE="$(awk '/_warning_/ {print $NF}' /tmp/cookie)"  
+   curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${CODE}&id=1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP" -o temp_dataset.zip
+   unzip temp_dataset.zip
+   rm temp_dataset.zip
+   ```
+
+3. Download trained models:
+
+   ```shell
+   cd $CSSR_ROOT
+   mkdir output
+   ```
+   You can download trained models [here](https://drive.google.com/drive/folders/17yCHnmpJtxkog010ttFg2U2r8oBBoGlD?usp=sharing). Then, place the unzipped directory of the models you want to use under <$CSSR_ROOT/output/>.
+
+3. Install packages:
+
+   ```shell
+   cd $CSSR_ROOT
+   pip install -r requirement.txt
+   ```
+
+4. Training:
+   ```shell
+   cd $CSSR_ROOT
+   python train.py --config_file <CONFIG FILE>
+   ```
+
+5. Test:
+   ```shell
+   cd $CSSR_ROOT
+   python test.py output/<OUTPUT DIRECTORY (OUTPUT_DIR at config.yaml)> <iteration number> 
+   ```
+
+## Citations
+If you find this work useful, please consider citing it.
 ```
-@article{kondo2023csbsr,
-  title={Joint Learning of Blind Super-Resolution and Crack Segmentation for Realistic Degraded Images},
-  author={Kondo, Yuki and Ukita, Norimichi},
-  journal={arXiv preprint arXiv:2302.12491},
-  year={2023}
+@inproceedings{CSSR2021,
+  title={Crack Segmentation for Low-Resolution Images using Joint Learning with Super-Resolution},
+  author={Kondo, Yuki and Ukita, Norimichi},
+  booktitle={International Conference on Machine Vision Applications (MVA)},
+  year={2021}
 }
+
 ```
