@@ -1,0 +1,40 @@
+SOLVER:
+  SEG_LOSS_FUNC: "BoundaryCombo"
+  BCELOSS_WEIGHT: [1, 1]
+  WB_AND_D_WEIGHT: [1, 1]
+  # WARMUP_FACTOR : 1.0
+  BATCH_SIZE: 6
+  LR: 2e-5
+  NORM_SR_OUTPUT : "instance"
+  TASK_LOSS_WEIGHT: 0.3
+  MAX_ITER: 700000
+  SR_LOSS_FUNC: "KBPN"
+  SR_PRETRAIN_ITER: [1, 30001] # [start, stop]
+  SR_SR_MODULE_PRETRAIN_ITER: [1, 10001]
+  SR_KERNEL_MODULE_PRETRAIN_ITER: [10001, 20001]
+  SCHEDULER: False
+
+MODEL:
+  SR: "KBPN"
+  SCALE_FACTOR: 4
+  NUM_STAGES: 4
+  DETECTOR_TYPE: "PSPNet"
+  UP_SAMPLE_METHOD: "pixel_shuffle"
+  OPTIMIZER: 'Adam'
+
+OUTPUT_DIR: 'output/CSBSR/model_compe/CSBSR_w_PSPNet_beta03'
+
+DATASET:
+  DATA_AUGMENTATION:
+    - ["ConvertFromInts", None]
+    - ["RandomMirror", None]
+    - ["ToTensor", None]
+    - ["RandomVerticalFlip", 0.3] # p
+    - ["RandomCrop", None]
+
+BLUR:
+  FLAG: True 
+  KERNEL_SIZE: 7
+
+INPUT:
+  IMAGE_SIZE: [224, 224]
