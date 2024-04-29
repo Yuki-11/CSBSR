@@ -21,6 +21,7 @@ def inference_for_ss(args, cfg, model, test_loader):
 
     fnames = []
     max_iter = len(test_loader)
+    assert max_iter != 0, "Dataset size is 0!!"
 
     img_psnr_scores = np.array([])
     kernel_psnr_scores = np.array([])
