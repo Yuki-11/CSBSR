@@ -1,3 +1,8 @@
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## This code is based on https://github.com/NVIDIA/DeepLearningExamples/blob/master/PyTorch/Segmentation/MaskRCNN/pytorch/maskrcnn_benchmark/data/samplers/iteration_based_batch_sampler.py,
+## not licensed as of April 27, 2024.
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 from torch.utils.data.sampler import BatchSampler
 
 

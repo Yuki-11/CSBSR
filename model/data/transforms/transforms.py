@@ -1,3 +1,18 @@
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Toyota Technological Institute
+## Author: Yuki Kondo
+## Copyright (c) 2024
+## yuki.kondo.ab@gmail.com
+##
+## This source code is licensed under the Apache License license found in the
+## LICENSE file in the root directory of this source tree 
+##
+## This code refers to the following codes
+## [1] https://github.com/xingyizhou/CenterNet/ (MIT License)
+## [2] https://github.com/amdegroot/ssd.pytorch/blob/master/utils/augmentations.py (MIT License)
+## [3] https://github.com/YutaroOgawa/pytorch_advanced/blob/master/2_objectdetection/utils/data_augumentation.py (MIT License)
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 from configparser import Interpolation
 import numpy as np
 import cv2
@@ -35,6 +50,8 @@ def multiple_list(list1, list2):
 
     return output_list
 
+
+# https://github.com/xingyizhou/CenterNet/blob/a5a0483beb0f9e8705f6dc67d8817275369cfa7e/src/lib/utils/image.py#L126
 def gaussian_radius(det_size, min_overlap=0.7):
     height, width = det_size
 
@@ -123,6 +140,8 @@ def jaccard_numpy(box_a, box_b):
     return inter / union  # [A,B]
 
 
+## https://github.com/amdegroot/ssd.pytorch/blob/master/utils/augmentations.py
+## https://github.com/YutaroOgawa/pytorch_advanced/blob/master/2_objectdetection/utils/data_augumentation.py
 class Compose(object):
     def __init__(self, transforms):
         self.transforms = transforms
@@ -528,47 +547,6 @@ class RandomCrop(object):
             mask = torch_transforms.functional.resized_crop(mask, size=self.size, *params)
 
         return image, mask
-
-
-# class RandomCrop(object):
-#     def __init__(self, crop_size):
-#         self.crop_size = crop_size
-
-#     def __call__(self, image, boxes=None, labels=None):
-#         height, width, _ = image.shape
-
-#         image_center = np.zeros(2)
-#         image_center[0] = np.random.randint(width)
-#         image_center[1] = np.random.randint(height)
-
-#         left_pad = int(np.clip(self.crop_size/2 - image_center[0], 0, None))
-#         right_pad = int(np.clip(self.crop_size/2 - (width - image_center[0]), 0, None))
-#         upper_pad = int(np.clip(self.crop_size/2 - image_center[1], 0, None))
-#         under_pad = int(np.clip(self.crop_size/2 - (height - image_center[1]), 0, None))
-
-#         image_center += np.array([left_pad, upper_pad]).astype(np.uint16)
-
-#         crop_area = np.array([image_center[0] - self.crop_size/2, image_center[1] - self.crop_size/2,
-#                               image_center[0] + self.crop_size/2, image_center[1] + self.crop_size/2]).astype(np.uint16)
-
-#         image = np.pad(image, [(upper_pad, under_pad), (left_pad, right_pad), (0, 0)], 'constant')       
-#         image = image[crop_area[1]:crop_area[3], crop_area[0]:crop_area[2], :]
-#         boxes[:, :2] = boxes[:, :2] + np.array([left_pad, upper_pad])
-#         boxes[:, 2:] = boxes[:, 2:] + np.array([left_pad, upper_pad])
-#         boxes[:, :2] = boxes[:, :2] - crop_area[:2]
-#         boxes[:, 2:] = boxes[:, 2:] - crop_area[:2]
-
-#         boxes = np.clip(boxes, 0, self.crop_size)
-#         boxes = np.clip(boxes, 0, self.crop_size)
-#         box_sizes = boxes[:, 2:] - boxes[:, :2]
-
-#         mask = box_sizes > 0
-#         mask = mask.all(1)
-
-#         boxes = boxes[mask]
-#         labels = labels[mask]
-
-#         return image, boxes, labels
 
 
 class PriorBox(nn.Module):
