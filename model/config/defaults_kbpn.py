@@ -1,3 +1,13 @@
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Toyota Technological Institute
+## Author: Yuki Kondo
+## Copyright (c) 2024
+## yuki.kondo.ab@gmail.com
+##
+## This source code is licensed under the Apache License license found in the
+## LICENSE file in the root directory of this source tree 
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 from yacs.config import CfgNode as CN
 
 _C = CN()
