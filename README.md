@@ -9,8 +9,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
     er=Tgbsbs8AAAAJ">Norimichi Ukita</a>
   </p>
   <p align="center">
-  Toyota Technological Institute</p>
-  <p align="center">
+  Toyota Technological Institute<br>
   IEEE Transactions on Instrumentation and Measurement (TIM) 2024
   </p>
   <h2 align="center"><p>
