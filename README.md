@@ -53,7 +53,7 @@ codepip install protobuf==3.20.1
 Download the model weights from [here](https://drive.google.com/drive/folders/1dbLbf4vl_O4OFfzJ3vFwFQ187fAZeI5X) and save them under /weights/. The performance of the released models is as follows.
 
 
-|Model|IoU_{max}|AIU|HD95_{min}|AHD95|PSNR|SSIM|Link|
+|Model|IoU<sub>max</sub>|AIU|HD95<sub>min</sub>|AHD95|PSNR|SSIM|Link|
 |:----|:----|:----|:----|:----|:----|:----|:----|
 |CSBSR w/ PSPNet (*β*=0.3)|0.573|0.552|20.92|22.52|28.75|0.703|[here](https://drive.google.com/drive/folders/116EvkbVlOfwB8AfrLmtsVVJOxtMlCFpw?usp=drive_link)
 |CSBSR w/ HRNet+OCR (*β*=0.9)|0.553|0.534|17.54|20.29|27.66|0.668|[here](https://drive.google.com/drive/folders/1wsnGw6440eg-Y7QCtTQntxrWl7wILmTr?usp=drive_link)
