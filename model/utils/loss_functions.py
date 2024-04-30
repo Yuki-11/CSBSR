@@ -6,6 +6,10 @@
 ##
 ## This source code is licensed under the Apache License license found in the
 ## LICENSE file in the root directory of this source tree 
+##
+## This code refers to the following codes
+## [1] https://github.com/JunMa11/SegLossOdyssey/tree/master (Apache License)
+## [2] https://github.com/hubutui/DiceLoss-PyTorch (No License)
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 import torch
@@ -32,10 +36,10 @@ class BoundaryComboLoss(nn.Module):
         self.per_epoch = per_epoch 
         self.iter = resume_iter % per_epoch
 
-        print('xxx:', resume_iter, per_epoch, resume_iter // per_epoch)
+        # print('xxx:', resume_iter, per_epoch, resume_iter // per_epoch)
         self.alpha =  1.0 - (resume_iter // per_epoch) * 0.01 * self.decrease_ratio
         self.alpha = self.alpha_min if self.alpha <= self.alpha_min else self.alpha
-        print('alpha:', self.alpha)
+        # print('alpha:', self.alpha)
 
         print(self.iter, '\n\n')
         
@@ -86,9 +90,9 @@ class GeneralizedBoundaryComboLoss(nn.Module):
         self.smooth = smooth
         self.reduction = reduction
         self.pos_weight = pos_weight
-        print('xxx:', resume_iter, per_epoch, resume_iter // per_epoch)
+        # print('xxx:', resume_iter, per_epoch, resume_iter // per_epoch)
         self.alpha =  1.0 - (resume_iter // per_epoch) * 0.01 * decrease_ratio
-        print('alpha:', self.alpha)
+        # print('alpha:', self.alpha)
         self.alpha_min = alpha_min
         self.fix_alpha = False
         self.decrease_ratio = decrease_ratio
@@ -137,9 +141,9 @@ class Boundary_GDiceLoss(nn.Module):
         # per_epoch = int(per_epoch / 2)
         self.smooth = smooth
         self.reduction = reduction
-        print('xxx:', resume_iter, per_epoch, resume_iter // per_epoch)
+        # print('xxx:', resume_iter, per_epoch, resume_iter // per_epoch)
         self.alpha =  1.0 - (resume_iter // per_epoch) * 0.01 * decrease_ratio
-        print('alpha:', self.alpha)
+        # print('alpha:', self.alpha)
         self.alpha_min = alpha_min
         self.fix_alpha = False
         self.decrease_ratio = decrease_ratio
@@ -307,40 +311,6 @@ class BinaryDiceLoss(nn.Module):
         else:
             raise Exception('Unexpected reduction {}'.format(self.reduction))
 
-
-# class DiceLoss(nn.Module):
-#     """Dice loss, need one hot encode input
-#     Args:
-#         weight: An array of shape [num_classes,]
-#         ignore_index: class index to ignore
-#         predict: A tensor of shape [N, C, *]
-#         target: A tensor of same shape with predict
-#         other args pass to BinaryDiceLoss
-#     Return:
-#         same as BinaryDiceLoss
-#     """
-#     def __init__(self, weight=None, ignore_index=None, **kwargs):
-#         super(DiceLoss, self).__init__()
-#         self.kwargs = kwargs
-#         self.weight = weight
-#         self.ignore_index = ignore_index
-
-#     def forward(self, predict, target):
-#         assert predict.shape == target.shape, 'predict & target shape do not match'
-#         dice = BinaryDiceLoss(**self.kwargs)
-#         total_loss = 0
-#         predict = F.softmax(predict, dim=1)
-
-#         for i in range(target.shape[1]):
-#             if i != self.ignore_index:
-#                 dice_loss = dice(predict[:, i], target[:, i])
-#                 if self.weight is not None:
-#                     assert self.weight.shape[0] == target.shape[1], \
-#                         'Expect weight shape [{}], get[{}]'.format(target.shape[1], self.weight.shape[0])
-#                     dice_loss *= self.weights[i]
-#                 total_loss += dice_loss
-
-#         return total_loss/target.shape[1]
 
 class BCE_DiceLoss(nn.Module):
     def __init__(self, smooth=1, p=2, reduction='none', pos_weight=[1, 1], loss_weight = [1, 1], gdice=False, out_map=False):

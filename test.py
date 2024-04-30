@@ -1,3 +1,13 @@
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Toyota Technological Institute
+## Author: Yuki Kondo
+## Copyright (c) 2024
+## yuki.kondo.ab@gmail.com
+##
+## This source code is licensed under the Apache License license found in the
+## LICENSE file in the root directory of this source tree 
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 import argparse
 import datetime
 import os
@@ -84,7 +94,7 @@ def main():
     parser.add_argument('--test_aiu', type=bool, default=True)
     parser.add_argument('--test_surface_distance', action="store_true")
     parser.add_argument('--test_classification_metrics', action="store_true")
-    parser.add_argument('--sf_save_image', action="store_false", help="If ")
+    parser.add_argument('--sf_save_image', action="store_false", help="If you do not want the output images to be saved, you should turn off this flag.")
     parser.add_argument('--origin_img_size', type=bool, default=True)
     parser.add_argument('--tti_crack_dataset', type=bool, default=False)
     parser.add_argument('--trained_model', type=str, default=None)
