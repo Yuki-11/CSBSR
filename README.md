@@ -29,7 +29,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
 -----
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/csbsr-arch.png" alt="example" width=80%>
+    <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/csbsr-arch.png" alt="example" width=100%>
     <br>
     <em>Proposed joint learning network with blind SR and segmentation.</em>
 </p>
