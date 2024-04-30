@@ -5,11 +5,17 @@ Crack Segmentation for Realistic Degraded Images</h1>
   <p align="center">
     <a href="https://scholar.google.com/citations?user=lijAs5AAAAAJ">Yuki Kondo</a>
     ·
-    <a href="https://scholar.google.com/citations?user=Tgbsbs8AAAAJ">Norimichi Ukita</a>
+    <a href="https://scholar.google.com/citations?us
+    er=Tgbsbs8AAAAJ">Norimichi Ukita</a>
   </p>
+  <p align="center">
+  Toyota Technological Institute</p>
+  <h3 align="center">
+  IEEE Transactions on Instrumentation and Measurement (TIM) 2024
+  </h3>
   <h2 align="center"><p>
     <a href="https://arxiv.org/abs/2302.12491" align="center">Paper</a> | 
-    <a href="https://yuki-11.github.io/CSBSR-project-page/" align="center">Project Page (Coming soon...)</a>
+    <a href="https://yuki-11.github.io/CSBSR-project-page/" align="center">Project Page</a>
   </p></h2>
   <div align="center"></div>
 </p>
@@ -20,11 +26,24 @@ Crack Segmentation for Realistic Degraded Images</h1>
     <em>Crack segmentation challenges for synthetically-degraded images given by low resolution and anisotropic Gaussian blur. Our method (f) CSBSR succeeds in detecting cracks in the most detail compared to previous studies (d), (e). Furthermore, in several cases our method was able to detect cracks as successfully as when GT high-resolution images were used for segmentation (c), despite the fact that our method was inferring from degraded images.</em>
 </p>
 
+-----
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/csbsr-arch.png" alt="example" width=80%>
+    <br>
+    <em>Proposed joint learning network with blind SR and segmentation.</em>
+</p>
+
+[![LICENSE](https://img.shields.io/github/license/xinntao/basicsr.svg)](https://github.com/Yuki-11/CSBSR/blob/main/LICENSE)
+
+
 ## Table of Contents
 
 - [About the Project](#about-the-project)
 - [Usage](#usage)
 - [License](#license)
+- [Citation](#Citation)
+- [Acknowledgement](#Acknowledgement)
 - [Contact](#contact)
 
 ## About the Project
