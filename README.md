@@ -20,7 +20,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
 </p>
 <br/>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/result_csbsr_github.png" alt="example" width=80%>
+    <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/result_csbsr_github.png" alt="example" width=100%>
     <br>
     <em>Crack segmentation challenges for synthetically-degraded images given by low resolution and anisotropic Gaussian blur. Our method (f) CSBSR succeeds in detecting cracks in the most detail compared to previous studies (d), (e). Furthermore, in several cases our method was able to detect cracks as successfully as when GT high-resolution images were used for segmentation (c), despite the fact that our method was inferring from degraded images.</em>
 </p>
