@@ -122,7 +122,7 @@ Distributed under the Apache-2.0 license License. Some of the code is based on t
 ## Citation
 If you find our models useful, please consider citing our paper!
 ```
-@article{kondo2023csbsr,
+@article{kondo2024csbsr,
   author={Kondo, Yuki and Ukita, Norimichi},
   journal={IEEE Transactions on Instrumentation and Measurement}, 
   title={Joint Learning of Blind Super-Resolution and Crack Segmentation for Realistic Degraded Images}, 
