@@ -100,7 +100,7 @@ Additionally, download the degraded original test set from [here](https://drive.
 ### Testing
 Run the following command for testing:
 ```bash
-python test.py weights/CSBSR_w_PSPNet_beta03/latest --sf_save_image
+python test.py weights/CSBSR_w_PSPNet_beta03 latest --sf_save_image
 ```
 
 ### Training
