@@ -25,6 +25,10 @@ Crack Segmentation for Realistic Degraded Images</h1>
     <em>Crack segmentation challenges for synthetically-degraded images given by low resolution and anisotropic Gaussian blur. Our method (f) CSBSR succeeds in detecting cracks in the most detail compared to previous studies (d), (e). Furthermore, in several cases our method was able to detect cracks as successfully as when GT high-resolution images were used for segmentation (c), despite the fact that our method was inferring from degraded images.</em>
 </p>
 
+<br>
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/joint-learning-of-blind-super-resolution-and/crack-segmentation-on-khanhha-s-dataset-4x)](https://paperswithcode.com/sota/crack-segmentation-on-khanhha-s-dataset-4x?p=joint-learning-of-blind-super-resolution-and)
+
 -----
 
 <p align="center">
