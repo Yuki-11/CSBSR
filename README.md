@@ -68,7 +68,7 @@ codepip install protobuf==3.20.1
 
 ### Download Model Weights
 
-Download the model weights from [here](https://drive.google.com/drive/folders/1dbLbf4vl_O4OFfzJ3vFwFQ187fAZeI5X) and save them under weights/. The performance of the released models is as follows.
+Download the model weights from [here](https://drive.google.com/drive/folders/1dbLbf4vl_O4OFfzJ3vFwFQ187fAZeI5X) and save them under `weights/`. The performance of the released models is as follows.
 
 
 |Model|IoU<sub>max</sub>|AIU|HD95<sub>min</sub>|AHD95|PSNR|SSIM|Link|
@@ -82,9 +82,9 @@ Download the model weights from [here](https://drive.google.com/drive/folders/1d
 |CSBSR w/ *w<sup>F</sup>* (*m<sup>F</sup>*=1)+BlurSkip|0.550|0.528|18.06|19.1|28.65|0.702|[here](https://drive.google.com/drive/folders/1Gk_rY9YtObMh5jK5R6KB5e9ENsofvPKM?usp=drive_link)
 
 ### Prepare Dataset
-Download the crack segmentation dataset by khanhha from [here](https://drive.google.com/open?id=1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP) and extract it under datasets/. For more details, refer [khanhha's repository](https://github.com/khanhha/crack_segmentation).
+Download the crack segmentation dataset by khanhha from [here](https://drive.google.com/open?id=1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP) and extract it under `datasets/`. For more details, refer [khanhha's repository](https://github.com/khanhha/crack_segmentation).
 
-Additionally, download the degraded original test set from [here](https://drive.google.com/drive/folders/1wywKIh9Z-XYwRlw1f2mNnjm8OdwnGPWg?usp=drive_link) and extract it under datasets/crack_segmentation_dataset. Finally, the directory structure should look like this:
+Additionally, download the degraded original test set from [here](https://drive.google.com/drive/folders/1wywKIh9Z-XYwRlw1f2mNnjm8OdwnGPWg?usp=drive_link) and extract it under `datasets/crack_segmentation_dataset`. Finally, the directory structure should look like this:
 
 ```bash
 ├── datasets
