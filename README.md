@@ -27,7 +27,6 @@ Crack Segmentation for Realistic Degraded Images</h1>
 
 <br>
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/joint-learning-of-blind-super-resolution-and/crack-segmentation-on-khanhha-s-dataset-4x)](https://paperswithcode.com/sota/crack-segmentation-on-khanhha-s-dataset-4x?p=joint-learning-of-blind-super-resolution-and)
 
 -----
 
@@ -38,6 +37,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
 </p>
 
 [![LICENSE](https://img.shields.io/github/license/xinntao/basicsr.svg)](https://github.com/Yuki-11/CSBSR/blob/main/LICENSE)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/joint-learning-of-blind-super-resolution-and/crack-segmentation-on-khanhha-s-dataset-4x-1)](https://paperswithcode.com/sota/crack-segmentation-on-khanhha-s-dataset-4x-1?p=joint-learning-of-blind-super-resolution-and)
 
 
 ## Table of Contents
