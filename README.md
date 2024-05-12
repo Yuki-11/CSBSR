@@ -68,7 +68,7 @@ codepip install protobuf==3.20.1
 
 ### Download Model Weights
 
-Download the model weights from [here](https://drive.google.com/drive/folders/1dbLbf4vl_O4OFfzJ3vFwFQ187fAZeI5X) and save them under /weights/. The performance of the released models is as follows.
+Download the model weights from [here](https://drive.google.com/drive/folders/1dbLbf4vl_O4OFfzJ3vFwFQ187fAZeI5X) and save them under weights/. The performance of the released models is as follows.
 
 
 |Model|IoU<sub>max</sub>|AIU|HD95<sub>min</sub>|AHD95|PSNR|SSIM|Link|
