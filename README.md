@@ -20,7 +20,7 @@ Crack Segmentation for Realistic Degraded Images</h1>
 </p>
 <br/>
 <strong>
-  CSBSR [IEEE TIM'23] is the advanced version of [CSSR [MVA'21]](https://github.com/Yuki-11/CSSR)!
+  CSBSR [IEEE TIM'23] is the advanced version of <a href="https://github.com/Yuki-11/CSSR">CSSR</a> [MVA'21]!
 </strong>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/result_csbsr_github.png" alt="example" width=100%>
