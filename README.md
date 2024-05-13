@@ -16,6 +16,8 @@ Crack Segmentation for Realistic Degraded Images</h1>
     <a href="https://arxiv.org/abs/2302.12491" align="center">Paper</a> | 
     <a href="https://yuki-11.github.io/CSBSR-project-page/" align="center">Project Page</a>
   </p></h2>
+  [![LICENSE](https://img.shields.io/github/license/xinntao/basicsr.svg)](https://github.com/Yuki-11/CSBSR/blob/main/LICENSE)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/joint-learning-of-blind-super-resolution-and/crack-segmentation-on-khanhha-s-dataset-4x-1)](https://paperswithcode.com/sota/crack-segmentation-on-khanhha-s-dataset-4x-1?p=joint-learning-of-blind-super-resolution-and)
   <div align="center">
     <strong>
       🚀 CSBSR [IEEE TIM'23] is the advanced version of <a href="https://github.com/Yuki-11/CSSR">CSSR</a> [MVA'21]!
@@ -40,10 +42,6 @@ Crack Segmentation for Realistic Degraded Images</h1>
     <br>
     <em>Proposed joint learning network with blind SR and segmentation.</em>
 </p>
-
-[![LICENSE](https://img.shields.io/github/license/xinntao/basicsr.svg)](https://github.com/Yuki-11/CSBSR/blob/main/LICENSE)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/joint-learning-of-blind-super-resolution-and/crack-segmentation-on-khanhha-s-dataset-4x-1)](https://paperswithcode.com/sota/crack-segmentation-on-khanhha-s-dataset-4x-1?p=joint-learning-of-blind-super-resolution-and)
-
 
 ## Table of Contents
 
