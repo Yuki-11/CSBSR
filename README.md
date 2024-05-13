@@ -16,12 +16,14 @@ Crack Segmentation for Realistic Degraded Images</h1>
     <a href="https://arxiv.org/abs/2302.12491" align="center">Paper</a> | 
     <a href="https://yuki-11.github.io/CSBSR-project-page/" align="center">Project Page</a>
   </p></h2>
+
+  <strong>
+    🚀 CSBSR [IEEE TIM'23] is the advanced version of <a href="https://github.com/Yuki-11/CSSR">CSSR</a> [MVA'21]!
+  </strong>
   <div align="center"></div>
 </p>
 <br/>
-<strong>
-  CSBSR [IEEE TIM'23] is the advanced version of <a href="https://github.com/Yuki-11/CSSR">CSSR</a> [MVA'21]!
-</strong>
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/Yuki-11/CSBSR/main/fig/result_csbsr_github.png" alt="example" width=100%>
     <br>
