@@ -87,8 +87,8 @@ Download the model weights from [here](https://drive.google.com/drive/folders/1d
 |CSBSR w/ CrackFormer (*β*=0.9)|0.469|0.443|39.37|56.59|25.93|0.571|[here](https://drive.google.com/drive/folders/1PpEtTfFc55ZqNXHnBVEnQWtehj003Yys?usp=drive_link)
 |CSBSR w/ U-Net (*β*=0.3)|0.530|0.506|26.33|27.24|28.68|0.702|[here](https://drive.google.com/drive/folders/16v3x3o-l08UHzdQ47kG6UIu_fA91r9Hi?usp=drive_link)
 |CSSR w/ PSPNet (*β*=0.7)|0.557|0.539|21.20|24.74|28.35|0.656|[here](https://drive.google.com/drive/folders/116EvkbVlOfwB8AfrLmtsVVJOxtMlCFpw?usp=drive_link)
-|CSBSR w/ *w<sup>F</sup>* (*m<sup>F</sup>*=1)|0.573|0.551|18.73|21.7|28.73|0.702|[here](https://drive.google.com/drive/folders/1UJcWFGNEXG4RElrWih9uzFNY-jsjk865?usp=drive_link)
-|CSBSR w/ *w<sup>F</sup>* (*m<sup>F</sup>*=1)+BlurSkip|0.550|0.528|18.06|19.1|28.65|0.702|[here](https://drive.google.com/drive/folders/1Gk_rY9YtObMh5jK5R6KB5e9ENsofvPKM?usp=drive_link)
+|CSBSR w/ PSPNet (*β*=0.3)+*w<sup>F</sup>* (*m<sup>F</sup>*=1)|0.573|0.551|18.73|21.7|28.73|0.702|[here](https://drive.google.com/drive/folders/1UJcWFGNEXG4RElrWih9uzFNY-jsjk865?usp=drive_link)
+|CSBSR w/ PSPNet (*β*=0.3)+*w<sup>F</sup>* (*m<sup>F</sup>*=1)+BlurSkip|0.550|0.528|18.06|19.1|28.65|0.702|[here](https://drive.google.com/drive/folders/1Gk_rY9YtObMh5jK5R6KB5e9ENsofvPKM?usp=drive_link)
 
 ### Prepare Dataset
 Download the crack segmentation dataset by khanhha from [here](https://drive.google.com/open?id=1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP) and extract it under `datasets/`. For more details, refer [khanhha's repository](https://github.com/khanhha/crack_segmentation).
